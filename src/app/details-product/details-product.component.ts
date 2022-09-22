@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../../shared/data.service';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-details-product',
