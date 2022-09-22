@@ -3,7 +3,7 @@
     <hr/>
     <div class="card" *ngFor="let product of products">
         <h2>
-            <a [routerLink]="['/product', product.id]">{{product.name}}</a>
+            <a [routerLink]="['/product',product.id]">{{product.name}}</a>
         </h2>
         <div>Category: {{product.category}}</div>
         <div style="font-style: italic;">Description: "{{product.description}}"</div>
