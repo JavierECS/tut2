@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class ProductListComponent implements OnInit {
+export class DataService {
 
-  public products = [
+  private products = [
     {
       id: 1,
       name: 'Buebito',
@@ -45,9 +43,12 @@ export class ProductListComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  getProducts(){
+    return this.products;
+  }
 
-  ngOnInit(): void {
+  getProductById(id: any){
+    return this.products.filter(product => product.id == id);
   }
 
 }
